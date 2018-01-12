@@ -8,53 +8,44 @@ body {
    background-color: black;
 }
 
-.background-container, .background {
+img {
+   width: 80%;
    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1:
+}
+
+.background-container-1, .background-container-2 {
+   position: absolute;
+   z-index: -1;
    top: 50%;
    left: 50%;
    overflow: hidden;
    width: 100%;
    height: 140px;
    transform: translate(-50%, -50%);
-   background-image: linear-gradient( to right, #172136, #20061b);
+   background-color: transparent;
 }
 
-/* ROAD SECTION */
-
-.background {
-   width: 100%;
+.background-container-1 {
    z-index: 1;
-}
-
-.circles {
-   z-index: 1;
-
-   display: inline-block;
-
-   width: 20px;
-   height: 20px;
-   margin: 60px 1.6%;
-
-   border-radius: 100px;
-   background-color: white;
-}
-
-.circles:first-child {
-   margin-left: 3.2%;
 }
 
 /* PACMAN */
 
 .pacman {
+   z-index: 1;
    position: absolute;
    animation: pacman-movement 6s linear infinite
 }
 
 .pacman::before, .pacman::after {
    position: absolute;
-   z-index: 2;
+   z-index: -1;
    content: "";
-   border: solid 40px yellow;
+   border: solid 40px #f60067;
    border-right: solid 40px transparent;
    border-bottom: solid 40px transparent;
    border-radius: 100%;
@@ -128,10 +119,10 @@ body {
       background-color: white;
    }
    50% {
-      background-color: blue;
+      background-color: #54e0ff;
    }
    100% {
-      background-color: red;
+      background-color: #45b0f5;
    }
 }
 
