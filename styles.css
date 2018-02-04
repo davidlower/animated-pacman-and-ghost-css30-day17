@@ -236,3 +236,9 @@ img {
       transform: rotateZ(-134deg);
    }
 }
+
+@media screen and (max-width: 650px) {
+   img {
+      width: 95%;
+   }
+}
